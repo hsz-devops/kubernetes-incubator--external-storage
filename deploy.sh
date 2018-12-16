@@ -29,19 +29,19 @@ export REGISTRY=quay.io/external_storage/
 docker login -u "${QUAY_USERNAME}" -p "${QUAY_PASSWORD}" quay.io
 
 provisioners=(
-efs-provisioner
-cephfs-provisioner
-flex-provisioner
-glusterblock-provisioner
-glusterfile-provisioner
-glusterfs-simple-provisioner
-iscsi-controller
-local-volume-provisioner-bootstrap
-local-volume-provisioner
-nfs-client-provisioner
+# efs-provisioner
+# cephfs-provisioner
+# flex-provisioner
+# glusterblock-provisioner
+# glusterfile-provisioner
+# glusterfs-simple-provisioner
+# iscsi-controller
+# local-volume-provisioner-bootstrap
+# local-volume-provisioner
+# nfs-client-provisioner
 nfs-provisioner
-openebs-provisioner
-rbd-provisioner
+# openebs-provisioner
+# rbd-provisioner
 )
 
 regex="^($(IFS=\|; echo "${provisioners[*]}"))-(v[0-9]+\.[0-9]+\.[0-9]+-k8s1.[0-9]+)$"
