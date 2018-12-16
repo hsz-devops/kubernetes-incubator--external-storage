@@ -12,6 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+export REGISTRY=ez123
+export VERSION=v2.2.0-k8s1.12-2.7.1
 ifeq ($(REGISTRY),)
 	REGISTRY = quay.io/kubernetes_incubator/
 endif

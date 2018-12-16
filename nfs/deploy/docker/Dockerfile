@@ -20,7 +20,7 @@ FROM fedora:28
 # 1. Ignore (bind mounted) files in mount table, only present in >= V2.7.1 which is not yet packaged
 # 2. Set NFS_V4_RECOV_ROOT to /export
 
-RUN dnf install -y tar gcc cmake autoconf libtool bison flex make gcc-c++ krb5-devel dbus-devel jemalloc-devel libnfsidmap-devel libnsl2-devel patch && dnf clean all \
+RUN dnf install -y tar gcc cmake autoconf libtool bison flex make gcc-c++ krb5-devel dbus-devel jemalloc-devel libnfsidmap-devel libnsl2-devel patch git bash-completion && dnf clean all \
 	&& curl -L https://github.com/nfs-ganesha/nfs-ganesha/archive/V2.7.1.tar.gz | tar zx \
 	&& curl -L https://github.com/nfs-ganesha/ntirpc/archive/v1.7.1.tar.gz | tar zx \
 	&& rm -r nfs-ganesha-2.7.1/src/libntirpc \
